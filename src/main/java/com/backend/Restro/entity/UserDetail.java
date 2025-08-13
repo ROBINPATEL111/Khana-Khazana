@@ -4,12 +4,10 @@ package com.backend.Restro.entity;
 import jakarta.persistence.*;
 //import org.springframework.data.annotation.Id;
 import java.math.BigInteger;
-import java.math.BigInteger;
-import java.util.Formatter;
 
 @Entity
-@Table(name = "user_detail")
-public class user_detail {
+@Table(name = "UserDetail")
+public class UserDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
