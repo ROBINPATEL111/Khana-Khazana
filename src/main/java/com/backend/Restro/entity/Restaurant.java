@@ -1,24 +1,22 @@
 package com.backend.Restro.entity;
-
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import lombok.Data;
 
 import java.time.LocalTime;
 
+@Data
 @Entity
 @Table(name = "Restaurant")
 public class Restaurant {
     @Id
+    @SequenceGenerator(name = "restaurant_id_seq", sequenceName = "restaurant_id_seq", allocationSize = 1, initialValue = 10)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Integer restro_id;
     private String name;
     private String address;
     private String cuisine;
-    private LocalTime open_time;
-    private LocalTime close_time;
-    private Integer no_of_table;
+    private LocalTime openTime;
+    private LocalTime closeTime;
+    private Integer noOfTable;
 }
