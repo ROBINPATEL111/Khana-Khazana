@@ -7,4 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 @Repository
 
 public interface UserDetailRepository extends JpaRepository<UserDetail, Integer> {
+    UserDetail findByName(String name);
+
+    UserDetail findByEmail(String email);
 }
